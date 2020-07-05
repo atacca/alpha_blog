@@ -1,0 +1,117 @@
+@import 'bootstrap/dist/css/bootstrap';
+
+a:link, a:visited {
+  text-decoration: none;
+  padding: 5px 8px;
+}
+
+.btn-light {
+  color: black !important;
+}
+
+.card {
+  color: white;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  width: 22rem;
+  padding:1%;
+  background-image: asset-url('cells.jpg');
+  background-repeat: no-repeat;
+}
+
+.card-articles {
+  background-color: #FFFAFA;
+  color: black;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.card-header {
+  background-color: #FAF0E6;
+}
+
+.card-footer {
+  background-color: #FFFAFA;
+}
+
+.inner-pages-heading {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.jumbotron {
+  color: white;
+  font-weight: bold;
+  background-image: asset-url('microscope.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.navbar {
+  background-color: #000033 !important;
+}
+
+.nav-link {
+  color: white !important;
+}
+
+/* Sticky Footer Classes - remember to put the page-content div in home.html
+from the top to just above the footer, and there's a body class to add, check
+the relevant html in the home.htl.erb file*/
+
+html,
+body {
+  height: 100%;
+}
+
+#page-content {
+  flex: 1 0 auto;
+  background-color: #F5F5F5;
+}
+
+#sticky-footer {
+  flex-shrink: none;
+}
+
+/* end sticky footer classes */
+
+#article_2 {
+  background-position: 65% 45%;
+}
+
+#article_3 {
+  background-position: 75% 45%;
+}
+
+#article_4 {
+  background-position: 85% 45%;
+}
+
+#bottom_links {
+  background-color: #000033;
+  color: #D3D3D3;
+}
+
+#home-container {
+  margin-top: 0.5rem;
+}
+
+#jumbotron_inner_container {
+  background-color: #000033;
+  opacity: 0.8;
+  padding: 1rem;
+}
+
+#logo {
+  font-size: 1.7em;
+  font-weight: bold;
+  letter-spacing: -1px;
+  color: white;
+}
+
+#secondary_contents_container {
+  display: flex;
+  justify-content: space-between;
+}
