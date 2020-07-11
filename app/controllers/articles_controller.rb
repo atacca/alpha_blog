@@ -39,6 +39,8 @@ class ArticlesController < ApplicationController
     redirect_to articles_path
   end
 
+  @latest_articles = Article.order(created_at: :desc).take(4)
+
   private
 
   def set_article

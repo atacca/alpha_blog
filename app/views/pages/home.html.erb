@@ -1,31 +1,42 @@
+<% @latest_article = Article.last %>
+<% @second_latest_article = Article.second_to_last %>
+<% @third_latest_article = Article.third_to_last %>
+<% @fourth_latest_article = Article.order(id: :desc).fourth %>
+
 <div class="container" id="home-container">
   <div class="jumbotron">
     <div class="container" id="jumbotron_inner_container">
-      <h1 class="display-4"><%= Article.last.title %></h1>
-      <p class="lead"><%= simple_format(Article.last.description.truncate(100)) %></p>
+      <h1 class="display-4"><%= @latest_article.title %></h1>
+      <p class="lead"><%= simple_format(@latest_article.description.truncate(100)) %></p>
+      <%= link_to "Read article", article_path(@latest_article), class: "btn btn-light" %>
     </div>
   </div>
 </div>
 
 <div class="container" id="secondary_contents_container">
 
+
   <div class="card shadow mb-5 bg-white rounded" style="float:left;margin-right:1rem" id="article_2">
-    <h5 class="card-title"><%= Article.second_to_last.title %></h5>
-    <p class="card-text"><%= simple_format(Article.second_to_last.description.truncate(100)) %></p>
-    <a href="#" type="button" class="btn btn-light"">Go to article</a>
+    <h5 class="card-title"><%= @second_latest_article.title %></h5>
+    <div class="card-text">
+        <%= simple_format(@second_latest_article.description.truncate(100)) %>
+    </div>
+    <%= link_to "Read article", article_path(@second_latest_article), class: "btn btn-light" %>
   </div>
 
   <div class="card shadow mb-5 bg-white rounded" style="float:left;margin-right:1rem" id="article_2">
-    <h5 class="card-title"><%= Article.third_to_last.title %></h5>
-    <p class="card-text"><%= simple_format(Article.third_to_last.description.truncate(100)) %></p>
-    <a href="#" type="button" class="btn btn-light"">Go to article</a>
+    <h5 class="card-title"><%= @third_latest_article.title %></h5>
+    <div class="card-text">
+        <%= simple_format(@third_latest_article.description.truncate(100)) %>
+    </div>
+    <%= link_to "Read article", article_path(@third_latest_article), class: "btn btn-light" %>
   </div>
 
   <div class="card shadow mb-5 bg-white rounded" style="padding:1%" id="article_4">
-    <h5 class="card-title"><%= Article.order(id: :desc).fourth.title %></h5>
-    <p class="card-text"><%= simple_format(Article.order(id: :desc).fourth.description.truncate(100)) %></p>
-    <a href="#" type="button" class="btn btn-light"">Go to article</a>
+    <h5 class="card-title"><%= @fourth_latest_article.title %></h5>
+    <div class="card-text">
+        <%= simple_format(@fourth_latest_article.description.truncate(100)) %>
     </div>
+    <%= link_to "Read article", article_path(@fourth_latest_article), class: "btn btn-light" %>
   </div>
-
 </div>
