@@ -39,13 +39,11 @@ class ArticlesController < ApplicationController
     redirect_to articles_path
   end
 
-  @latest_articles = Article.order(created_at: :desc).take(4)
-
-  private
-
   def set_article
     @article = Article.find(params[:id])
   end
+
+  private
 
   def article_params
     params.require(:article).permit(:title, :description)
