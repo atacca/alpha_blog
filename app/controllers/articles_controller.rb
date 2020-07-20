@@ -17,6 +17,7 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.new(article_params)
+    @article.user = User.first #temp hardcode to assign a user until auth in place
     if @article.save
       flash[:notice] = "Article successfully created!" # notice and alert are 2 common options here
       redirect_to article_path(@article)
