@@ -1,5 +1,9 @@
 @import 'bootstrap/dist/css/bootstrap';
 
+/*
+pagination css at the bottom. Using mislav/will_paginate's gem & styling
+*/
+
 a:link, a:visited {
   text-decoration: none;
   padding: 5px 8px;
@@ -74,9 +78,11 @@ a:link, a:visited {
   color: white !important;
 }
 
-/* Sticky Footer Classes - remember to put the page-content div in home.html
+/*
+Sticky Footer Classes - remember to put the page-content div in home.html
 from the top to just above the footer, and there's a body class to add, check
-the relevant html in the home.htl.erb file*/
+the relevant html in the home.htl.erb file
+*/
 
 html,
 body {
@@ -92,7 +98,9 @@ body {
   flex-shrink: none;
 }
 
-/* end sticky footer classes */
+/*
+end sticky footer classes
+*/
 
 #article_2 {
   background-position: 65% 45%;
@@ -132,3 +140,38 @@ body {
   display: flex;
   justify-content: space-between;
 }
+
+/*
+Pagination css
+*/
+.flickr_pagination {
+  text-align: center;
+  padding: 0.3em;
+  cursor: default; }
+  .flickr_pagination a, .flickr_pagination span, .flickr_pagination em {
+    padding: 0.2em 0.5em;
+    border-radius: 2px;
+    }
+  .flickr_pagination .disabled {
+    color: #aaaaaa; }
+  .flickr_pagination .current {
+    font-style: normal;
+    font-weight: bold;
+    color: #00008B; }
+  .flickr_pagination a {
+    border: 1px solid #FFFFFF;
+    color: #696969;
+    text-decoration: none; }
+    .flickr_pagination a:hover, .flickr_pagination a:focus {
+      border-color: #FFFFFF;
+      background: #FFFFFF;
+      color: #00008B; }
+  .flickr_pagination .page_info {
+    color: #00008B;
+    padding-top: 0.8em; }
+  .flickr_pagination .previous_page, .flickr_pagination .next_page {
+    border-width: 2px; }
+  .flickr_pagination .previous_page {
+    margin-right: 1em; }
+  .flickr_pagination .next_page {
+    margin-left: 1em; }
