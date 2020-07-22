@@ -17,7 +17,7 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.new(article_params)
-    @article.user = User.first #temp hardcode to assign a user until auth in place
+    @article.user = current_user #as defined in application_controller
     if @article.save
       flash[:notice] = "Article successfully created!" # notice and alert are 2 common options here
       redirect_to article_path(@article)
@@ -40,11 +40,11 @@ class ArticlesController < ApplicationController
     redirect_to articles_path
   end
 
+  private
+
   def set_article
     @article = Article.find(params[:id])
   end
-
-  private
 
   def article_params
     params.require(:article).permit(:title, :description)
